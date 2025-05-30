@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class array3
+{ 
+    public void main()
+    {
+        Scanner sc=new Scanner (System.in);
+        int ar[]=new int[10];
+        int i,j,c;
+        for(i=0;i<10;i++)
+        {
+            System.out.println("enter a number");
+            ar[i]=sc.nextInt();
+        }
+        System.out.print("the prime numbers are");
+        for(i=0;i<10;i++)
+        {
+            c=0;
+            for(j=1;j<=ar[i];j++)
+            {
+                if(ar[i]%j==0)
+                {
+                    c++;
+                }
+                if(c==2)
+                {
+                    System.out.println(ar[i]+",");
+                }
+            }
+        }
+    }
+}
+        
