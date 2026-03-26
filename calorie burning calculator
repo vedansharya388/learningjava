@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class steptracker
+{
+    String name;
+    int sw;
+    double cb;
+    double km;
+    public steptracker()
+    {
+        name="";
+        sw=0;
+        cb=0.0d;
+        km=0.0d;
+    }
+    void accept()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter your name");
+               name=sc.next();
+        System.out.println("enter steps walked");
+        sw=sc.nextInt();
+    }
+    void calculate()
+    {
+        cb=sw*0.04;
+        km=sw/1300;
+    }
+    void display()
+    {
+        System.out.println("customer name="+name);
+        System.out.println("calories burned="+cb);
+        System.out.println("distance travelled="+km);
+    }
+    public void main()
+    {
+        steptracker ob=new steptracker();
+        ob.accept();
+        ob.calculate();
+        ob.display();
+    }
+}
+        
+        
+    
+
