@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class EmployeeDesignationCount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Array to store 100 designations
+        String[] designations = new String[100];
+
+        // Accept designations from user
+        System.out.println("Enter the designation of 100 employees:");
+        for (int i = 0; i < 100; i++) {
+            System.out.print("Employee " + (i + 1) + " designation: ");
+            designations[i] = sc.nextLine();
+        }
+
+        // Accept designation to search
+        System.out.print("\nEnter the designation to search: ");
+        String searchDesignation = sc.nextLine();
+
+        // Count matching designations
+        int count = 0;
+        for (int i = 0; i < 100; i++) {
+            if (designations[i].equalsIgnoreCase(searchDesignation)) {
+                count++;
+            }
+        }
+
+        // Print result
+        System.out.println("\nTotal number of employees with designation '" 
+                           + searchDesignation + "': " + count);
+
+        sc.close();
+    }
+}
