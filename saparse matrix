@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class sparse
+{
+    public void main()
+    {
+        Scanner sc=new Scanner(System.in);
+        int a[][]=new int[4][4];
+        int r,c,m=0,v=0;
+        for(r=0;r<4;r++)
+        {
+            for(c=0;c<=r;c++)
+            {
+                System.out.println("enter a number");
+                   a[r][c]=sc.nextInt();
+
+                    }
+                }                       
+                for(c=0;c<=r;c++)
+                  
+                    if(a[r][c]==0)
+                    {
+                        m=m+1;
+                    }
+                    if(a[r][c]!=0)
+                {
+                    v=v+1;
+                }
+                if(m>v)
+                {
+                    System.out.println("its sparse matrix");
+                }
+                else
+                {
+                    System.out.println("its not sparse matrix");
+                }
+            }
+        }
+    
+
+            
+                
